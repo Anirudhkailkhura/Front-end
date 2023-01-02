@@ -1,4 +1,3 @@
-/* eslint-disable */
 import Product from "./pages/Product";
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
@@ -31,7 +30,7 @@ const App = () => {
         <Route path="/cart">
           <Cart />
         </Route>
-        
+       
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route path="/register">
           {user ? <Redirect to="/" /> : <Register />}

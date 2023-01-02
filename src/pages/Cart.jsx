@@ -1,5 +1,5 @@
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
+
+import { Add, Remove } from '@material-ui/icons';
 import { useSelector } from 'react-redux';
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
@@ -193,9 +193,9 @@ const Cart = () => {
                 </ProductDetail>
                 <PriceDetail>
                   <ProductAmountContainer>
-                    <AddIcon />
+                    <Add />
                     <ProductAmount>{product.quantity}</ProductAmount>
-                    <RemoveIcon />
+                    <Remove />
                   </ProductAmountContainer>
                   <ProductPrice>Rs.{product.price}</ProductPrice>
                 </PriceDetail>

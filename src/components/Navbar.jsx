@@ -1,10 +1,12 @@
-import { Badge } from '@mui/material';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+//import { Badge } from '@mui/material';
+//import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import React from 'react'
 import styled from 'styled-components'
-import SearchIcon from '@mui/icons-material/Search';
+//import SearchIcon from '@mui/icons-material/Search';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Search, ShoppingCart } from '@material-ui/icons';
+import { Badge } from '@material-ui/core';
 
 
 
@@ -73,7 +75,7 @@ const Navbar = () => {
           <Language>EN</Language>
           <SearchContainer>
             <Input placeholder="Search" />
-            <SearchIcon style={{ color: "gray", fontSize: 16 }} />
+            <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
 
@@ -87,7 +89,7 @@ const Navbar = () => {
          <Link to ="/cart">
           <MenuItem>
           <Badge badgeContent={quantity} color="primary">
-            <ShoppingCartOutlinedIcon />
+            <ShoppingCart />
             </Badge>
           </MenuItem>
           </Link>

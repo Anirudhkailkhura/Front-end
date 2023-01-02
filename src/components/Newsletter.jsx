@@ -1,6 +1,7 @@
 
+import { Send } from "@material-ui/icons";
 import styled from "styled-components"
-import SendIcon from '@mui/icons-material/Send';
+
 
 const Container = styled.div`
 height: 60vh;
@@ -53,7 +54,7 @@ const Newsletter = () => {
             <InputContainer>
                 <Input placeholder="Your email" />
                 <Button>
-                    <SendIcon />
+                    <Send />
                 </Button>
             </InputContainer>
         </Container>

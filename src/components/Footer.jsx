@@ -1,9 +1,10 @@
 import styled from "styled-components"
-import InstagramIcon from '@mui/icons-material/Instagram';
-import {
-    Facebook, Twitter, WhatsApp, MailOutline,
-    Phone, Room
-} from "@mui/icons-material";
+
+// import {
+//     Facebook, Twitter, WhatsApp, MailOutline,
+//     Phone, Room
+// } from "@mui/icons-material";
+import { Facebook, Instagram, MailOutline, Phone, Room, Twitter, WhatsApp } from "@material-ui/icons";
 
 
 const Container = styled.div`
@@ -88,7 +89,7 @@ const Footer = () => {
                     A illo dolore nobis id quisquam maiores doloremque?</Description>
                 <SocialContainer>
                     <SocialIcon color="E4405F">
-                        <InstagramIcon />
+                        <Instagram />
                     </SocialIcon>
                     <SocialIcon color="3B5999">
                         <Facebook />

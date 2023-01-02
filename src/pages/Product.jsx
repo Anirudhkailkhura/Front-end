@@ -1,5 +1,4 @@
-import RemoveIcon from '@mui/icons-material/Remove';
-import AddIcon from '@mui/icons-material/Add';
+
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
@@ -10,6 +9,7 @@ import { publicRequest } from '../requestMethod';
 import { useEffect, useState } from 'react';
 import { addProduct } from '../redux/cartRedux';
 import { useDispatch } from 'react-redux';
+import { Add, Remove } from "@material-ui/icons";
 
 const Container = styled.div``;
 
@@ -184,9 +184,9 @@ const Product = () => {
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
-              <RemoveIcon onClick={() => handleQuantity("dec")} />
+              <Remove onClick={() => handleQuantity("dec")} />
               <Amount>{quantity}</Amount>
-              <AddIcon onClick={() => handleQuantity("inc")} />
+              <Add onClick={() => handleQuantity("inc")} />
             </AmountContainer>
             <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
