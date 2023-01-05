@@ -19,8 +19,8 @@ const Products = ({ cat, filters, sort }) => {
       try {
         const res = await axios.get(
           cat
-          " https://dhaarmik-zj46.onrender.com" ||
-             "http://localhost:5000/api/products"
+            ? `http://localhost:5000/api/products?category=${cat}`
+            : "http://localhost:5000/api/products"
         );
         setProducts(res.data);
       } catch (err) { }
