@@ -14,20 +14,19 @@ const Products = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
-  useEffect(() => {
+ useEffect(() => {
     const getProducts = async () => {
       try {
         const res = await axios.get(
           cat
-             `https://dhaarmik-zj46.onrender.com/api/products?category=${cat}`
-           
+            ? `http://localhost:5000/api/products?category=${cat}`
+            : "http://localhost:5000/api/products"
         );
         setProducts(res.data);
       } catch (err) { }
     };
     getProducts();
   }, [cat]);
-
   useEffect(() => {
     cat &&
       setFilteredProducts(
