@@ -17,10 +17,10 @@ const Products = ({ cat, filters, sort }) => {
  useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get(
+        const res = await axios.post(
           cat
-            ? `http://dhaarmik-zj46.onrender.com/api/products?category=${cat}`
-            : "http://dhaarmik-zj46.onrender.com/api/products"
+            ? `https://dhaarmik-zj46.onrender.com/api/products?category=${cat}`
+            : "https://dhaarmik-zj46.onrender.com/api/products"
         );
         setProducts(res.data);
       } catch (err) { }
